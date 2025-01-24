@@ -1,4 +1,4 @@
-name: Build X01BD rsuntk-KSU @master
+name: Build X01BD rsuntk-KSU @master w/ccache
 on:
   workflow_dispatch:
 
