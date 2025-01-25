@@ -15,7 +15,7 @@ jobs:
       uses: nivranaitsirhc/kernel_build_action@nivranaitsirhc-patch-fix_ccache_implementation
       with:
           kernel-url: https://github.com/nivranaitsirhc/android_kernel_asus_sdm660-4.19
-          kernel-branch: master
+          kernel-branch: Twilight
           config: asus/X01BD-Twilight_defconfig
           arch: arm64
           aosp-gcc: true
