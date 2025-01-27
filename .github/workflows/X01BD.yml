@@ -1,7 +1,7 @@
 name: Build X01BD rsuntk-KSU @master
 on:
   workflow_dispatch:
-
+  
 jobs:
   Build-Kernel:
     strategy:
@@ -29,3 +29,6 @@ jobs:
           anykernel3: true
           # set to false due to ccache causing errors with clang
           ccache: false
+          # setup release
+          release: true
+          access-token: ${{ secrets.GHT }}
