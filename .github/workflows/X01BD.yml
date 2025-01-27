@@ -32,6 +32,7 @@ jobs:
           # setup release
           release: true
           release-name: X01BD-Twilight
+          release-name-ksu-info: true
           release-name-kernel: true
-          release-name-ksu-sha: true
+          release-name-kernel-sha: true
           access-token: ${{ secrets.GHT }}
