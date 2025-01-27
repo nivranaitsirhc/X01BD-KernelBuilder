@@ -12,7 +12,7 @@ jobs:
 
     steps:
     - name: Build Kernel
-      uses: nivranaitsirhc/kernel_build_action@nivranaitsirhc-patch-fix_ccache_implementation
+      uses: nivranaitsirhc/kernel_build_action@main
       with:
           kernel-url: https://github.com/nivranaitsirhc/android_kernel_asus_sdm660-4.19
           kernel-branch: Twilight
@@ -31,4 +31,7 @@ jobs:
           ccache: false
           # setup release
           release: true
+          release-name: X01BD-Twilight
+          release-name-kernel: true
+          release-name-ksu-sha: true
           access-token: ${{ secrets.GHT }}
