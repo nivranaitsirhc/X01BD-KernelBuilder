@@ -1,7 +1,7 @@
-name: Build X01BD rsuntk-KSU @master w/ccache
+name: Build X01BD rsuntk-KSU @master with ccache
 on:
   workflow_dispatch:
-
+  
 jobs:
   Build-Kernel:
     strategy:
@@ -12,7 +12,7 @@ jobs:
 
     steps:
     - name: Build Kernel
-      uses: nivranaitsirhc/kernel_build_action@nivranaitsirhc-patch-fix_ccache_implementation
+      uses: nivranaitsirhc/kernel_build_action@ccache_implementation
       with:
           kernel-url: https://github.com/nivranaitsirhc/android_kernel_asus_sdm660-4.19
           kernel-branch: Twilight
@@ -27,5 +27,12 @@ jobs:
           ksu-other: true
           ksu-url: https://github.com/rsuntk/KernelSU
           anykernel3: true
-          # set to false due to ccache causing errors with clang
+          # test ccache
           ccache: true
+          # setup release
+          release: true
+          release-name: X01BD-Twilight
+          release-name-ksu-info: true
+          release-name-kernel: true
+          release-name-kernel-sha: true
+          access-token: ${{ secrets.GHT }}
