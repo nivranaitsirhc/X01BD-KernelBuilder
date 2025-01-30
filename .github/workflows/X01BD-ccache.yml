@@ -12,7 +12,7 @@ jobs:
 
     steps:
     - name: Build Kernel
-      uses: nivranaitsirhc/kernel_build_action@action_fix
+      uses: nivranaitsirhc/kernel_build_action@action_enhance_command_logic
       with:
           kernel-url: https://github.com/nivranaitsirhc/android_kernel_asus_sdm660-4.19
           kernel-branch: Twilight
