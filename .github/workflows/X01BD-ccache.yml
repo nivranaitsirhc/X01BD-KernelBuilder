@@ -12,7 +12,7 @@ jobs:
 
     steps:
     - name: Build Kernel
-      uses: dabao1955/kernel_build_action@main
+      uses: nivranaitsirhc/kernel_build_action@action_enhance_command_logic
       with:
           kernel-url: https://github.com/nivranaitsirhc/android_kernel_asus_sdm660-4.19
           kernel-branch: Twilight
@@ -31,8 +31,8 @@ jobs:
           ccache: true
           # setup release
           release: true
-          #release-name: X01BD-Twilight
-          #release-name-ksu-info: true
-          #release-name-kernel: true
-          #release-name-kernel-sha: true
+          release-name: X01BD-Twilight
+          release-name-ksu-info: true
+          release-name-kernel: true
+          release-name-kernel-sha: true
           access-token: ${{ secrets.GHT }}
