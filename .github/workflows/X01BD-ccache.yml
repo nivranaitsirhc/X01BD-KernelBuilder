@@ -12,7 +12,7 @@ jobs:
 
     steps:
     - name: Build Kernel
-      uses: nivranaitsirhc/kernel_build_action@action_enhance_command_logic
+      uses: dabao1955/kernel_build_action@main
       with:
           kernel-url: https://github.com/nivranaitsirhc/android_kernel_asus_sdm660-4.19
           kernel-branch: Twilight
@@ -30,7 +30,7 @@ jobs:
           # test ccache
           ccache: true
           # setup release
-          #release: true
+          release: true
           #release-name: X01BD-Twilight
           #release-name-ksu-info: true
           #release-name-kernel: true
