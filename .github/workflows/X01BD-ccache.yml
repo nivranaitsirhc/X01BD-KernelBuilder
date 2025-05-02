@@ -35,4 +35,4 @@ jobs:
           #release-name-ksu-info: true
           #release-name-kernel: true
           #release-name-kernel-sha: true
-          #access-token: ${{ secrets.GHT }}
+          access-token: ${{ secrets.GHT }}
