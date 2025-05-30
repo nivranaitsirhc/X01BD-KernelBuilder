@@ -20,7 +20,7 @@ jobs:
           arch: arm64
           aosp-gcc: true
           aosp-clang: true
-          aosp-clang-version: r530567
+          aosp-clang-version: r522817
           android-version: ""
           # set to false due kernel_build_actions re-patching namespace.c
           ksu: false
