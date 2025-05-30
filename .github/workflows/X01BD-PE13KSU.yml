@@ -1,4 +1,4 @@
-name: Build X01BD PE-13 with KSU
+name: Build X01BD PE-13 with KSU w/ ccache
 on:
   workflow_dispatch:
   
@@ -12,27 +12,29 @@ jobs:
 
     steps:
     - name: Build Kernel
-      uses: dabao1955/kernel_build_action@v1.8.3
+      uses: dabao1955/kernel_build_action@main
       with:
           kernel-url: https://github.com/nivranaitsirhc/kernel_asus_sdm660-PixelExperience
           kernel-branch: thirteen
           config: asus/X01BD_defconfig
           arch: arm64
-          aosp-gcc: true
-          aosp-clang: true
+          aosp-gcc: false
+          aosp-clang: false
           aosp-clang-version: r522817
           android-version: ""
+          other-clang-url: https://github.com/ZyCromerZ/Clang/releases/download/21.0.0git-20250314-release/Clang-21.0.0git-20250314.tar.gz
           # set to false due kernel_build_actions re-patching namespace.c
           ksu: false
           ksu-other: true
           ksu-url: https://github.com/rsuntk/KernelSU
           anykernel3: true
           # set to false due to ccache causing errors with clang
-          ccache: false
+          ccache: true
           # setup release
           release: true
           #release-name: X01BD-Twilight
           #release-name-ksu-info: true
           #release-name-kernel: true
           #release-name-kernel-sha: true
+          extra-cmd: LD=ld.lld AR=llvm-ar AS=llvm-as NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump STRIP=llvm-strip
           access-token: ${{ secrets.GHT }}
