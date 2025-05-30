@@ -15,7 +15,7 @@ jobs:
       uses: nivranaitsirhc/kernel_build_action@main
       with:
           kernel-url: https://github.com/nivranaitsirhc/kernel_asus_sdm660-PixelExperience
-          kernel-branch: thirteen
+          kernel-branch: thirteen-ksu
           config: asus/X01BD_defconfig
           arch: arm64
           aosp-gcc: false
