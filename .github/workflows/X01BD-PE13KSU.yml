@@ -16,7 +16,7 @@ jobs:
       with:
           kernel-url: https://github.com/nivranaitsirhc/kernel_asus_sdm660-PixelExperience
           kernel-branch: thirteen-ksu
-          config: asus/X01BD-KSU_defconfig
+          config: asus/X01BD_defconfig
           arch: arm64
           aosp-gcc: false
           aosp-clang: false
