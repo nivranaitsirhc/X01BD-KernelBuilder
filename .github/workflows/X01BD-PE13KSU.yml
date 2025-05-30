@@ -12,7 +12,7 @@ jobs:
 
     steps:
     - name: Build Kernel
-      uses: dabao1955/kernel_build_action@main
+      uses: dabao1955/kernel_build_action@v1.8.3
       with:
           kernel-url: https://github.com/nivranaitsirhc/kernel_asus_sdm660-PixelExperience
           kernel-branch: thirteen
@@ -20,7 +20,7 @@ jobs:
           arch: arm64
           aosp-gcc: true
           aosp-clang: true
-          aosp-clang-version: r450784d
+          aosp-clang-version: r530567
           android-version: ""
           # set to false due kernel_build_actions re-patching namespace.c
           ksu: false
