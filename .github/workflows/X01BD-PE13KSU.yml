@@ -12,29 +12,35 @@ jobs:
 
     steps:
     - name: Build Kernel
-      uses: nivranaitsirhc/kernel_build_action@main
+      uses: nivranaitsirhc/Android_Kernel_Builder@master
       with:
+          # General Config
+          release: true
+          release-name: X01BDA-PE13@KSU
+          
+          # Kernel Config
           kernel-url: https://github.com/nivranaitsirhc/kernel_asus_sdm660-PixelExperience
           kernel-branch: thirteen-ksu
-          config: asus/X01BD_defconfig
+          defconfig: asus/X01BD_defconfig
           arch: arm64
-          aosp-gcc: false
+          
+          # Build Config
+          android-version: ""
           aosp-clang: false
           aosp-clang-version: r522817
-          android-version: ""
           other-clang-url: https://github.com/ZyCromerZ/Clang/releases/download/21.0.0git-20250314-release/Clang-21.0.0git-20250314.tar.gz
-          # set to false due kernel_build_actions re-patching namespace.c
+          other-clang-branch: main
+          extra-cmd: LD=ld.lld AR=llvm-ar AS=llvm-as NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump STRIP=llvm-strip
+          
+          # KernelSU Support & others
           ksu: false
-          ksu-other: true
-          ksu-url: https://github.com/rsuntk/KernelSU
+          # ksu-version:
+          # ksu-url: https://github.com/rsuntk/KernelSU
+          
+          # Extras
           anykernel3: true
-          # set to false due to ccache causing errors with clang
-          ccache: false
-          # setup release
-          release: true
           #release-name: X01BD-Twilight
           #release-name-ksu-info: true
           #release-name-kernel: true
           #release-name-kernel-sha: true
-          extra-cmd: LD=ld.lld AR=llvm-ar AS=llvm-as NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump STRIP=llvm-strip
           access-token: ${{ secrets.GHT }}
