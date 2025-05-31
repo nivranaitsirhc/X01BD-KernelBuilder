@@ -20,6 +20,7 @@ jobs:
 
           # Build Config
           use-ccache: true
+          ccache-stats: true
           extra-cmd: LD=ld.lld AR=llvm-ar AS=llvm-as NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump STRIP=llvm-strip
           # Build Config - Clang
           use-clang: true
