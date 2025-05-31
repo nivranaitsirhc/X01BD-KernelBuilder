@@ -17,28 +17,37 @@ jobs:
           # General Config
           release: true
           release-name: X01BDA-PE13@KSU
-          
-          # Kernel Config
-          kernel-url: https://github.com/nivranaitsirhc/kernel_asus_sdm660-PixelExperience
-          kernel-branch: thirteen-ksu
-          defconfig: asus/X01BD_defconfig
-          arch: arm64
-          
+
           # Build Config
-          android-version: ""
-          aosp-clang: false
-          aosp-clang-version: r522817
+          use-ccache: true
+          extra-cmd: LD=ld.lld AR=llvm-ar AS=llvm-as NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump STRIP=llvm-strip
+          # Build Config - Clang
+          use-clang: true
+          #aosp-clang: false
+          #aosp-clang-version: r522817
+          #android-version: 12
           other-clang-url: https://github.com/ZyCromerZ/Clang/releases/download/21.0.0git-20250314-release/Clang-21.0.0git-20250314.tar.gz
           other-clang-branch: main
-          extra-cmd: LD=ld.lld AR=llvm-ar AS=llvm-as NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump STRIP=llvm-strip
+          # Build Config - GCC
+          use-gcc: false
+          #aosp-gcc: false
+          
+          # Kernel Config
+          defconfig: asus/X01BD_defconfig
+          arch: arm64
+          kernel-url: https://github.com/nivranaitsirhc/kernel_asus_sdm660-PixelExperience
+          kernel-branch: thirteen-ksu
+
+          # Extra-patch
+          use-patch: false
           
           # KernelSU Support & others
           ksu: false
-          # ksu-version:
-          # ksu-url: https://github.com/rsuntk/KernelSU
+          #ksu-version: main
+          #ksu-url: https://github.com/rsuntk/KernelSU
           
           # Extras
-          anykernel3: true
+          use-anykernel3: true
           #release-name: X01BD-Twilight
           #release-name-ksu-info: true
           #release-name-kernel: true
