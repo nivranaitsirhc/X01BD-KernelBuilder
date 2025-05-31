@@ -42,7 +42,7 @@ jobs:
           use-patch: false
           
           # KernelSU Support & others
-          ksu: false
+          use-ksu: false
           #ksu-version: main
           #ksu-url: https://github.com/rsuntk/KernelSU
           
