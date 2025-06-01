@@ -17,6 +17,11 @@ jobs:
           # General Config
           release: true
           release-name: X01BDA-PE13@KSU
+          use-extended-rel-name: true
+          rel-name-kernel-version: true
+          rel-name-kernel-sha: true
+          rel-name-ksu-version: true
+          rel-name-ksu-sha: true
 
           # Build Config
           use-ccache: true
