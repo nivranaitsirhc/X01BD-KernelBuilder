@@ -1,4 +1,4 @@
-name: Build X01BD rsuntk-KSU @master with ccache
+name: Build X01BD SonicBSV with KSU
 on:
   workflow_dispatch:
   
@@ -12,27 +12,50 @@ jobs:
 
     steps:
     - name: Build Kernel
-      uses: nivranaitsirhc/kernel_build_action@action_enhance_command_logic
+      uses: nivranaitsirhc/Android_Kernel_Builder@master
       with:
+          # General Config
+          release: true
+          release-name: X01BD-SonicBSVKSU
+          use-extended-rel-name: true
+          rel-name-kernel-version: true
+          rel-name-kernel-sha: true
+          rel-name-ksu-version: true
+          rel-name-ksu-sha: true
+
+          # Build Config
+          use-ccache: true
+          ccache-stats: true
+          extra-cmd: LD=ld.lld AR=llvm-ar AS=llvm-as NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump STRIP=llvm-strip
+          # Build Config - Clang
+          use-clang: true
+          #aosp-clang: false
+          #aosp-clang-version: r522817
+          #android-version: 12
+          other-clang-url: https://github.com/ZyCromerZ/Clang/releases/download/21.0.0git-20250314-release/Clang-21.0.0git-20250314.tar.gz
+          other-clang-branch: main
+          # Build Config - GCC
+          use-gcc: false
+          #aosp-gcc: false
+          
+          # Kernel Config
+          defconfig: asus/X01BD-Twilight_defconfig
+          arch: arm64
           kernel-url: https://github.com/nivranaitsirhc/android_kernel_asus_sdm660-4.19
           kernel-branch: Twilight
-          config: asus/X01BD-Twilight_defconfig
-          arch: arm64
-          aosp-gcc: true
-          aosp-clang: true
-          aosp-clang-version: r530567
-          android-version: ""
-          # set to false due kernel_build_actions re-patching namespace.c
-          ksu: false
-          ksu-other: true
-          ksu-url: https://github.com/rsuntk/KernelSU
-          anykernel3: true
-          # test ccache
-          ccache: true
-          # setup release
-          release: true
-          release-name: X01BD-Twilight
-          release-name-ksu-info: true
-          release-name-kernel: true
-          release-name-kernel-sha: true
+
+          # Extra-patch
+          use-patch: false
+          
+          # KernelSU Support & others
+          use-ksu: false
+          #ksu-version: main
+          #ksu-url: https://github.com/rsuntk/KernelSU
+          
+          # Extras
+          use-anykernel3: true
+          #release-name: X01BD-Twilight
+          #release-name-ksu-info: true
+          #release-name-kernel: true
+          #release-name-kernel-sha: true
           access-token: ${{ secrets.GHT }}
