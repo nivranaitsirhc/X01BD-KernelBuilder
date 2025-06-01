@@ -26,7 +26,7 @@ jobs:
           # Build Config
           use-ccache: true
           ccache-stats: true
-          extra-cmd: LD=ld.lld AR=llvm-ar AS=llvm-as NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump STRIP=llvm-strip
+          #extra-cmd: LD=ld.lld AR=llvm-ar AS=llvm-as NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump STRIP=llvm-strip
           # Build Config - Clang
           use-clang: true
           #aosp-clang: false
@@ -54,8 +54,4 @@ jobs:
           
           # Extras
           use-anykernel3: true
-          #release-name: X01BD-Twilight
-          #release-name-ksu-info: true
-          #release-name-kernel: true
-          #release-name-kernel-sha: true
           access-token: ${{ secrets.GHT }}
