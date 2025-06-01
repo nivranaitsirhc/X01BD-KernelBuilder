@@ -16,7 +16,7 @@ jobs:
       with:
           # General Config
           release: true
-          release-name: X01BDA-PE13@KSU
+          release-name: X01BDA-PE13KSU
           use-extended-rel-name: true
           rel-name-kernel-version: true
           rel-name-kernel-sha: true
