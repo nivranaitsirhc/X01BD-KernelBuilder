@@ -1,4 +1,4 @@
-name: Build X01BD PE-13 with KSU w/ ccache
+name: Build X01BD PE-13 with KSU
 on:
   workflow_dispatch:
   
