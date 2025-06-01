@@ -32,11 +32,11 @@ jobs:
           #aosp-clang: true
           #aosp-clang-version: r522817
           #android-version: 12
-          #other-clang-url: https://github.com/ZyCromerZ/Clang/releases/download/21.0.0git-20250314-release/Clang-21.0.0git-20250314.tar.gz
-          #other-clang-branch: main
+          other-clang-url: https://github.com/ZyCromerZ/Clang/releases/download/21.0.0git-20250314-release/Clang-21.0.0git-20250314.tar.gz
+          other-clang-branch: main
           # Build Config - GCC
           use-gcc: true
-          aosp-gcc: false
+          aosp-gcc: true
           
           # Kernel Config
           defconfig: asus/X01BD-Twilight_defconfig
