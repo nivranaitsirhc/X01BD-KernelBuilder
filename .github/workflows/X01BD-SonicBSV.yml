@@ -29,11 +29,11 @@ jobs:
           #extra-cmd: LD=ld.lld AR=llvm-ar AS=llvm-as NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump STRIP=llvm-strip
           # Build Config - Clang
           use-clang: true
-          #aosp-clang: false
-          #aosp-clang-version: r522817
+          aosp-clang: true
+          aosp-clang-version: r522817
           #android-version: 12
-          other-clang-url: https://github.com/ZyCromerZ/Clang/releases/download/21.0.0git-20250314-release/Clang-21.0.0git-20250314.tar.gz
-          other-clang-branch: main
+          #other-clang-url: https://github.com/ZyCromerZ/Clang/releases/download/21.0.0git-20250314-release/Clang-21.0.0git-20250314.tar.gz
+          #other-clang-branch: main
           # Build Config - GCC
           use-gcc: false
           #aosp-gcc: false
