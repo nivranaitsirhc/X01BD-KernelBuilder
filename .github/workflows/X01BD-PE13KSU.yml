@@ -8,7 +8,8 @@ jobs:
       fail-fast: false
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
+      releases: write
 
     steps:
     - name: Build Kernel
