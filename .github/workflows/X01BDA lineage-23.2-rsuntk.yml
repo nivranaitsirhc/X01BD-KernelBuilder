@@ -39,18 +39,18 @@ jobs:
           #aosp-gcc: false
           
           # Kernel Config
-          defconfig: vendor/asus/X01BD_defconfig
+          defconfig: vendor/asus/X01BD-KSU_defconfig
           arch: arm64
-          kernel-url: https://github.com/rsuntk/android_kernel_asus_sdm660-4.19
+          kernel-url: https://github.com/nivranaitsirhc/android_kernel_asus_sdm660-4.19
           kernel-branch: lineage-23.2
 
           # Extra-patch
           use-patch: false
           
           # KernelSU Support & others
-          use-ksu: false
-          #ksu-version: main
-          #ksu-url: https://github.com/rsuntk/KernelSU
+          use-ksu: true
+          ksu-version: main
+          ksu-url: https://github.com/rsuntk/KernelSU
           
           # Extras
           use-anykernel3: true
