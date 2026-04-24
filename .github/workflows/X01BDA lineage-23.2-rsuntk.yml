@@ -1,4 +1,4 @@
-name: Build X01BD PE-13 with KSU
+name: Build X01BD Lineage 23.2 with KSU
 on:
   workflow_dispatch:
   
@@ -41,16 +41,16 @@ jobs:
           # Kernel Config
           defconfig: asus/X01BD_defconfig
           arch: arm64
-          kernel-url: https://github.com/nivranaitsirhc/kernel_asus_sdm660-PixelExperience
-          kernel-branch: thirteen-ksu
+          kernel-url: https://github.com/rsuntk/android_kernel_asus_sdm660-4.19
+          kernel-branch: lineage-23.2
 
           # Extra-patch
           use-patch: false
           
           # KernelSU Support & others
-          use-ksu: false
-          #ksu-version: main
-          #ksu-url: https://github.com/rsuntk/KernelSU
+          use-ksu: true
+          ksu-version: main
+          ksu-url: https://github.com/rsuntk/KernelSU
           
           # Extras
           use-anykernel3: true
