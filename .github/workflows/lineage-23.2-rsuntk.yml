@@ -1,0 +1,61 @@
+name: Build X01BD PE-13 with KSU
+on:
+  workflow_dispatch:
+  
+jobs:
+  Build-Kernel:
+    strategy:
+      fail-fast: false
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+    - name: Build Kernel
+      uses: nivranaitsirhc/Android_Kernel_Builder@master
+      with:
+          # General Config
+          release: true
+          release-name: X01BD-PE13KSU
+          use-extended-rel-name: true
+          rel-name-kernel-version: true
+          rel-name-kernel-sha: true
+          rel-name-ksu-version: true
+          rel-name-ksu-sha: true
+
+          # Build Config
+          use-ccache: true
+          ccache-stats: true
+          extra-cmd: LD=ld.lld AR=llvm-ar AS=llvm-as NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump STRIP=llvm-strip
+          # Build Config - Clang
+          use-clang: true
+          #aosp-clang: false
+          #aosp-clang-version: r522817
+          #android-version: 12
+          other-clang-url: https://github.com/ZyCromerZ/Clang/releases/download/21.0.0git-20250314-release/Clang-21.0.0git-20250314.tar.gz
+          other-clang-branch: main
+          # Build Config - GCC
+          use-gcc: false
+          #aosp-gcc: false
+          
+          # Kernel Config
+          defconfig: asus/X01BD_defconfig
+          arch: arm64
+          kernel-url: https://github.com/nivranaitsirhc/kernel_asus_sdm660-PixelExperience
+          kernel-branch: thirteen-ksu
+
+          # Extra-patch
+          use-patch: false
+          
+          # KernelSU Support & others
+          use-ksu: false
+          #ksu-version: main
+          #ksu-url: https://github.com/rsuntk/KernelSU
+          
+          # Extras
+          use-anykernel3: true
+          #release-name: X01BD-Twilight
+          #release-name-ksu-info: true
+          #release-name-kernel: true
+          #release-name-kernel-sha: true
+          access-token: ${{ secrets.GHT }}
