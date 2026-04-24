@@ -12,50 +12,41 @@ jobs:
 
     steps:
     - name: Build Kernel
-      uses: nivranaitsirhc/Android_Kernel_Builder@master
+      uses: nivranaitsirhc/Android_Kernel_Builder@continue-changes
       with:
-          # General Config
-          release: true
-          release-name: X01BD-PE13KSU
-          use-extended-rel-name: true
-          rel-name-kernel-version: true
-          rel-name-kernel-sha: true
-          rel-name-ksu-version: true
-          rel-name-ksu-sha: true
-
-          # Build Config
-          use-ccache: true
-          ccache-stats: true
-          extra-cmd: LD=ld.lld AR=llvm-ar AS=llvm-as NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump STRIP=llvm-strip
-          # Build Config - Clang
-          use-clang: true
-          #aosp-clang: false
-          #aosp-clang-version: r522817
-          #android-version: 12
-          other-clang-url: https://github.com/ZyCromerZ/Clang/releases/download/21.0.0git-20250314-release/Clang-21.0.0git-20250314.tar.gz
-          other-clang-branch: main
-          # Build Config - GCC
-          use-gcc: false
-          #aosp-gcc: false
-          
           # Kernel Config
-          defconfig: vendor/asus/X01BD-KSU_defconfig
           arch: arm64
           kernel-url: https://github.com/nivranaitsirhc/android_kernel_asus_sdm660-4.19
           kernel-branch: lineage-23.2
+          
+          # defconfig: vendor/asus/X01BD-KSU_defconfig
+          defconfig: vendor/asus/X01BD_defconfig
 
-          # Extra-patch
-          use-patch: false
+          use-clang: true
+          aosp-clang-android-version: 13
+          aosp-clang-version: r450784d
+          
+          use-custom-clang: false
+          clang-url: https://github.com/ZyCromerZ/Clang/releases/download/21.0.0git-20250314-release/Clang-21.0.0git-20250314.tar.gz
+          clang-branch: 
+
+          use-gcc: true
+          aosp-gcc-android-version: 13
+
+          # Build Config
+          use-ccache: true
+          show-ccache-stats: true
+          # extra-cmd: LD=ld.lld AR=llvm-ar AS=llvm-as NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump STRIP=llvm-strip
           
           # KernelSU Support & others
           use-ksu: true
           ksu-version: main
-          ksu-url: https://github.com/rsuntk/KernelSU
+          ksu-url-setup: https://raw.githubusercontent.com/rsuntk/KernelSU/main/kernel/setup.sh
           
           # Extras
           use-anykernel3: true
-          #release-name: X01BD-Twilight
-          #release-name-ksu-info: true
-          #release-name-kernel: true
-          #release-name-kernel-sha: true
+          
+          release: true
+          release-name: X01BD-Lineage23.2-KSU
+          # use-extended-rel-name: true
           access-token: ${{ secrets.GHT }}
