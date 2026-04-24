@@ -31,7 +31,7 @@ jobs:
           clang-branch: 
 
           use-gcc: true
-          aosp-gcc-android-version: 13
+          aosp-gcc-android-version: 12L
 
           # Build Config
           use-ccache: true
