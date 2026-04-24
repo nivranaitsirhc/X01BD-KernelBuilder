@@ -39,7 +39,7 @@ jobs:
           #aosp-gcc: false
           
           # Kernel Config
-          defconfig: asus/X01BD_defconfig
+          defconfig: vendor/asus/X01BD_defconfig
           arch: arm64
           kernel-url: https://github.com/rsuntk/android_kernel_asus_sdm660-4.19
           kernel-branch: lineage-23.2
