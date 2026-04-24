@@ -12,7 +12,7 @@ jobs:
 
     steps:
     - name: Build Kernel
-      uses: nivranaitsirhc/Android_Kernel_Builder@continue-changes
+      uses: nivranaitsirhc/Android_Kernel_Builder@continues-changes
       with:
           # Kernel Config
           arch: arm64
