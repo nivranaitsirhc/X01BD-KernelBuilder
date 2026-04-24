@@ -16,7 +16,7 @@ jobs:
       with:
           # Kernel Config
           arch: arm64
-          kernel-url: https://github.com/nivranaitsirhc/android_kernel_asus_sdm660-4.19
+          kernel-url: https://github.com/rsuntk/android_kernel_asus_sdm660-4.19
           kernel-branch: lineage-23.2
           
           # defconfig: vendor/asus/X01BD-KSU_defconfig
