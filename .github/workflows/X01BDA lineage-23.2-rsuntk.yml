@@ -48,7 +48,7 @@ jobs:
           # Extras
           use-anykernel3: true
           
-          release: true
+          use-release: true
           release-name: X01BD-Lineage23.2-KSU
           # use-extended-rel-name: true
           access-token: ${{ secrets.GHT }}
