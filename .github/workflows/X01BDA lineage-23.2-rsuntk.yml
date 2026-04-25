@@ -24,16 +24,16 @@ jobs:
 
           use-clang: true
           use-aosp-clang: true
-          aosp-clang-branch: main-kernel
-          aosp-clang-version: clang-r450784d
-          custom-clang-url: https://github.com/ZyCromerZ/Clang/releases/download/21.0.0git-20250314-release/Clang-21.0.0git-20250314.tar.gz
-          custom-clang-branch: 
+          #aosp-clang-branch: main-kernel
+          #aosp-clang-version: clang-r596125
+          #custom-clang-url: https://github.com/ZyCromerZ/Clang/releases/download/21.0.0git-20250314-release/Clang-21.0.0git-20250314.tar.gz
+          #custom-clang-branch: 
 
           use-gcc: true
           use-aosp-gcc: true
-          aosp-gcc-branch: android10-release
-          custom-gcc-url:
-          custom-gcc-branch:
+          #aosp-gcc-branch: android10-release
+          #custom-gcc-url:
+          #custom-gcc-branch:
 
           # Build Config
           use-ccache: true
