@@ -38,7 +38,7 @@ jobs:
           # Build Config
           use-ccache: true
           show-ccache-stats: true
-          extended-build-commands: LD=ld.lld AR=llvm-ar AS=llvm-as NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump STRIP=llvm-strip
+          extended-build-commands: LD=ld.lld AR=llvm-ar AS=llvm-as NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump STRIP=llvm-strip ANDROID_SILENT_DEPRECATION=true
           
           # KernelSU Support & others
           use-ksu: true
