@@ -23,15 +23,17 @@ jobs:
           defconfig: vendor/asus/X01BD_defconfig
 
           use-clang: true
-          aosp-clang-android-version: 13
-          aosp-clang-version: r450784d
-          
-          use-custom-clang: false
-          clang-url: https://github.com/ZyCromerZ/Clang/releases/download/21.0.0git-20250314-release/Clang-21.0.0git-20250314.tar.gz
-          clang-branch: 
+          use-aosp-clang: true
+          aosp-clang-android-version: main-kernel
+          aosp-clang-version: clang-r450784d
+          custom-clang-url: https://github.com/ZyCromerZ/Clang/releases/download/21.0.0git-20250314-release/Clang-21.0.0git-20250314.tar.gz
+          custom-clang-branch: 
 
           use-gcc: true
-          aosp-gcc-branch: ndk-r13-release
+          use-aosp-gcc: true
+          aosp-gcc-branch: android10-release
+          custom-gcc-url:
+          custom-gcc-branch:
 
           # Build Config
           use-ccache: true
