@@ -24,7 +24,7 @@ jobs:
 
           use-clang: true
           use-aosp-clang: true
-          aosp-clang-android-version: main-kernel
+          aosp-clang-branch: main-kernel
           aosp-clang-version: clang-r450784d
           custom-clang-url: https://github.com/ZyCromerZ/Clang/releases/download/21.0.0git-20250314-release/Clang-21.0.0git-20250314.tar.gz
           custom-clang-branch: 
