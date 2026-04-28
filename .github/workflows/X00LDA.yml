@@ -18,6 +18,7 @@ jobs:
           arch: arm64
           kernel-url: https://github.com/nivranaitsirhc/android_kernel_asus_msm8937
           kernel-branch: master
+          install-commands-extended: libncurses5
           
           # defconfig: vendor/asus/X01BD-KSU_defconfig
           defconfig: X00LDA_defconfig
