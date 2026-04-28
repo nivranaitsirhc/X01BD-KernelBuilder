@@ -41,7 +41,7 @@ jobs:
           #extended-build-commands: LD=ld.lld AR=llvm-ar AS=llvm-as NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump STRIP=llvm-strip ANDROID_SILENT_DEPRECATION=true
           
           # KernelSU Support & others
-          use-ksu: true
+          use-ksu: false
           ksu-version: main
           ksu-url-setup: https://raw.githubusercontent.com/rsuntk/KernelSU/main/kernel/setup.sh
           
