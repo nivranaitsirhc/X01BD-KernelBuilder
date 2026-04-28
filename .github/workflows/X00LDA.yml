@@ -17,10 +17,10 @@ jobs:
           # Kernel Config
           arch: arm64
           kernel-url: https://github.com/nivranaitsirhc/android_kernel_asus_msm8937
-          kernel-branch: lineage-18.x
+          kernel-branch: master
           
           # defconfig: vendor/asus/X01BD-KSU_defconfig
-          defconfig: X00LDB_defconfig
+          defconfig: X00LDA_defconfig
 
           use-clang: true
           use-aosp-clang: true
@@ -49,6 +49,6 @@ jobs:
           use-anykernel3: true
           
           use-release: true
-          release-name: X00LDB-Lineage23.2-KSU
+          release-name: X00LDA-KSU
           # use-extended-rel-name: true
           access-token: ${{ secrets.GHT }}
