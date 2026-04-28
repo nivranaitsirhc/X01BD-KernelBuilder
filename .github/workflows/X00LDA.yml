@@ -18,21 +18,21 @@ jobs:
           arch: arm64
           kernel-url: https://github.com/nivranaitsirhc/android_kernel_asus_msm8937
           kernel-branch: master
-          install-commands-extended: libncurses6 libncursesw6
+          # install-commands-extended: libncurses6 libncursesw6
           
           # defconfig: vendor/asus/X01BD-KSU_defconfig
           defconfig: X00LDA_defconfig
 
           use-clang: true
           use-aosp-clang: true
-          aosp-clang-branch: android-9.0.0_r61 # android10-d4-release
-          aosp-clang-version: clang-4691093 # clang-r353983d
+          aosp-clang-branch: android10-qpr3-s1-release # android10-d4-release
+          aosp-clang-version: clang-r353983d # clang-r353983d
           #custom-clang-url: https://github.com/ZyCromerZ/Clang/releases/download/21.0.0git-20250314-release/Clang-21.0.0git-20250314.tar.gz
           #custom-clang-branch: 
 
           use-gcc: true
           use-aosp-gcc: true
-          aosp-gcc-branch: android-9.0.0_r61 # android10-d4-release
+          aosp-gcc-branch: android10-qpr3-s1-release # android10-d4-release
           #custom-gcc-url:
           #custom-gcc-branch:
 
