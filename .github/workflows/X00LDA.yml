@@ -24,14 +24,14 @@ jobs:
 
           use-clang: true
           use-aosp-clang: true
-          aosp-clang-branch: android12L-d2-s8-release # android10-d4-release
-          aosp-clang-version: clang-r416183b1 # clang-r353983d
+          aosp-clang-branch: android-9.0.0_r61 # android10-d4-release
+          aosp-clang-version: clang-r4691093 # clang-r353983d
           #custom-clang-url: https://github.com/ZyCromerZ/Clang/releases/download/21.0.0git-20250314-release/Clang-21.0.0git-20250314.tar.gz
           #custom-clang-branch: 
 
           use-gcc: true
           use-aosp-gcc: true
-          aosp-gcc-branch: android12L-d2-s8-release # android10-d4-release
+          aosp-gcc-branch: android-9.0.0_r61 # android10-d4-release
           #custom-gcc-url:
           #custom-gcc-branch:
 
